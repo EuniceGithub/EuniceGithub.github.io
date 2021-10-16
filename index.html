@@ -145,6 +145,156 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/16/flex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Eunice">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eunice的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/16/flex/" class="post-title-link" itemprop="url">flex</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-10-16 16:21:57 / Modified: 17:43:18" itemprop="dateCreated datePublished" datetime="2021-10-16T16:21:57+08:00">2021-10-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h1><p>flex布局意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>任何一个容器都可以指定为 Flex 布局。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>行内元素也可以使用 Flex 布局。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>采用 Flex 布局的元素，称为 Flex 容器。它的所有子元素自动成为容器成员，称为 Flex 项目。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190804195951602-110691576.png" alt="img"></p>
+<p>上方代码的box即为flex容器，它的子元素即为flex项目。</p>
+<h2 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h2><h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h4><p><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt="img" style="zoom:80%;" />
+
+<p>可能取值有：</p>
+<ol>
+<li><code>column</code>：垂直方向从上至下</li>
+<li><code>column-revers</code>：column的反向</li>
+<li><code>row</code>（默认）：水平方向从左到右</li>
+<li><code>row-revers</code>：row的反向</li>
+</ol>
+<h4 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h4><p><code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行。</p>
+<p>可能取个值有：</p>
+<ol>
+<li><code>nowrap</code>（默认）：不换行</li>
+<li><code>wrap</code>：换行，第一行在上方</li>
+<li><code>wrap-reverse</code>：换行，第一行在下方</li>
+</ol>
+<h4 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h4><p><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，取值为<code>flex-direction</code>与<code>flex-wrap</code>取值排列组合。</p>
+<p>默认值为<code>row nowrap</code>。</p>
+<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h4><p><code>justify-content</code>属性定义了项目在主轴上的对齐方式。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png" alt="img" style="zoom:50%;" />
+
+<p>可能取值有5个：</p>
+<p><code>flex-start</code>（默认值）：左对齐</p>
+<p><code>flex-end</code>：右对齐</p>
+<p><code>center</code>： 居中</p>
+<p><code>space-between</code>：两端对齐，项目之间的间隔都相等</p>
+<p><code>space-around</code>：每个项目两侧的空间相等</p>
+<h4 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h4><p><code>align-items</code>属性定义项目在交叉轴上如何对齐。</p>
+<p>交叉轴即与主轴垂直的轴。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png" alt="img" style="zoom:50%;" />
+
+<p>可能取值有：</p>
+<ol>
+<li><code>flex-start</code>：交叉轴的起点对齐</li>
+<li><code>flex-end</code>：交叉轴的终点对齐</li>
+<li><code>center</code>：交叉轴的中点对齐</li>
+<li><code>baseline</code>: 项目的第一行文字的基线对齐</li>
+<li><code>stretch</code>（默认）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
+</ol>
+<h4 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h4><p><code>align-content</code>属性定义了多根轴线在交叉轴上的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<ol>
+<li><p><code>flex-start</code>：与交叉轴的起点对齐。</p>
+</li>
+<li><p><code>flex-end</code>：与交叉轴的终点对齐。</p>
+</li>
+<li><p><code>center</code>：与交叉轴的中点对齐。</p>
+</li>
+<li><p><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
+<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806231128539-9221266.png" alt="img" style="zoom: 80%;" />
+</li>
+<li><p><code>space-around</code>：每根轴线两侧的空间都相等。</p>
+<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806230909994-1088454199.png" alt="img" style="zoom:80%;" />
+</li>
+<li><p><code>stretch</code>（默认）：轴线占满整个交叉轴。</p>
+</li>
+</ol>
+<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806230418272-1997484074.png" alt="img" style="zoom:80%;" />
+
+<h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><h4 id="order"><a href="#order" class="headerlink" title="order"></a>order</h4><p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808184738718-2028015504.png" alt="img" style="zoom:80%;" />
+
+<h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex- grow"></a>flex- grow</h4><p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，即如果存在剩余空间，也不放大。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item2</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808185733909-1052417826.png" alt="img" style="zoom:80%;" />
+
+<h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h4><p><code>flex-shrink</code>属性定义了项目的缩小比例，如果空间不足，该项目将缩小。默认为1，即空间不足时，大家一起等比缩小（即便设置了固定宽度也会缩小）</p>
+<p>但如果某个项目flex-shrink设置为0，则即便空间不够，自身也不缩小。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg" alt="img" style="zoom: 67%;" />
+
+<h4 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h4><p><code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间大小。它的默认值为<code>auto</code>，即项目的本来大小。</p>
+<p>它可以设为具体值，该具体值会覆盖原本项目在主轴上占据的空间大小。</p>
+<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a><strong>flex</strong></h4><p>取值：默认0 1 auto，flex属性是flex-grow，flex-shrink与flex-basis三个属性的简写。</p>
+<h4 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h4><p><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
+<p>该属性的可能取值与<code>align-items</code>一致（除<code>auto</code>外）。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png" alt="img" style="zoom:50%;" />
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item3</span>&#123;</span><br><span class="line">	<span class="attribute">align-self</span>: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/javascript%E5%BC%82%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -749,7 +899,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
