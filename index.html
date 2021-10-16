@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-10-16 16:21:57 / Modified: 17:43:18" itemprop="dateCreated datePublished" datetime="2021-10-16T16:21:57+08:00">2021-10-16</time>
+              <time title="Created: 2021-10-16 16:21:57 / Modified: 17:50:40" itemprop="dateCreated datePublished" datetime="2021-10-16T16:21:57+08:00">2021-10-16</time>
             </span>
 
           
@@ -193,6 +193,7 @@
 
 <p>采用 Flex 布局的元素，称为 Flex 容器。它的所有子元素自动成为容器成员，称为 Flex 项目。</p>
 <p><img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190804195951602-110691576.png" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190804195951602-110691576.png">https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190804195951602-110691576.png</a></p>
 <p>上方代码的box即为flex容器，它的子元素即为flex项目。</p>
 <h2 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h2><h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h4><p><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。</p>
 <img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt="img" style="zoom:80%;" />
@@ -235,34 +236,25 @@
 <li><code>stretch</code>（默认）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
 </ol>
 <h4 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h4><p><code>align-content</code>属性定义了多根轴线在交叉轴上的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png" alt="img" style="zoom:50%;" />
+
 <ol>
-<li><p><code>flex-start</code>：与交叉轴的起点对齐。</p>
-</li>
-<li><p><code>flex-end</code>：与交叉轴的终点对齐。</p>
-</li>
-<li><p><code>center</code>：与交叉轴的中点对齐。</p>
-</li>
-<li><p><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
-<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806231128539-9221266.png" alt="img" style="zoom: 80%;" />
-</li>
-<li><p><code>space-around</code>：每根轴线两侧的空间都相等。</p>
-<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806230909994-1088454199.png" alt="img" style="zoom:80%;" />
-</li>
-<li><p><code>stretch</code>（默认）：轴线占满整个交叉轴。</p>
-</li>
+<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
+<li><code>center</code>：与交叉轴的中点对齐。</li>
+<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li><code>space-around</code>：每根轴线两侧的空间都相等。</li>
+<li><code>stretch</code>（默认）：轴线占满整个交叉轴。</li>
 </ol>
-<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190806230418272-1997484074.png" alt="img" style="zoom:80%;" />
-
 <h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><h4 id="order"><a href="#order" class="headerlink" title="order"></a>order</h4><p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808184738718-2028015504.png" alt="img" style="zoom:80%;" />
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item2</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item3</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex- grow"></a>flex- grow</h4><p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，即如果存在剩余空间，也不放大。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item2</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item1</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>:<span class="number">1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <img src="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808185733909-1052417826.png" alt="img" style="zoom:80%;" />
 
+<p><a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808185733909-1052417826.png">https://img2018.cnblogs.com/blog/1213309/201908/1213309-20190808185733909-1052417826.png</a></p>
 <h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h4><p><code>flex-shrink</code>属性定义了项目的缩小比例，如果空间不足，该项目将缩小。默认为1，即空间不足时，大家一起等比缩小（即便设置了固定宽度也会缩小）</p>
 <p>但如果某个项目flex-shrink设置为0，则即便空间不够，自身也不缩小。</p>
 <img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg" alt="img" style="zoom: 67%;" />
